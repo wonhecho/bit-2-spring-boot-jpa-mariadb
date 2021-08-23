@@ -38,6 +38,12 @@ public class ItemServiceimpl implements ItemService {
     }
 
     @Override
+    public void deleteAll(){
+        itemrepository.deleteAll();
+    }
+
+
+    @Override
     public void deleteById(Long id) {
         itemrepository.deleteById(id);
     }

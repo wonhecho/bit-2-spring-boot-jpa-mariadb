@@ -4,13 +4,14 @@ import lombok.RequiredArgsConstructor;
 import net.cho.api.User.Domain.User;
 import net.cho.api.User.Repository.UserRepository;
 import net.cho.api.order.Repository.OrderRepository;
+import net.cho.api.util.Proxy;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 @RequiredArgsConstructor
 @Service
-public class UserServiceimpl implements UserService {
+public class UserServiceimpl extends Proxy implements UserService {
     private final UserRepository userrepository;
     @Override
     public List<User> findAll() {
