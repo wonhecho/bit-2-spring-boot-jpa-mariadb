@@ -14,7 +14,9 @@ spring:
 
 security:
   jwt:
-    secret: secret-value
+    token:
+      security-key: secret-key
+      expiration-length: 3600000
 shop:
   upload:
     path: C:\update
@@ -24,5 +26,5 @@ UserController:
   signin: Authenticates user and returns its JWT token
 
 server:
-  port: 8080
+  port: 8081
 

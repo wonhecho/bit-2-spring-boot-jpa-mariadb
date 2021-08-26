@@ -12,6 +12,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig extends SecurityConfigurerAdapter<DefaultSecurityFilterChain, HttpSecurity> {
     private final SecurityProvider provider;
 
+
     @Override
     public void configure(HttpSecurity builder) throws Exception {
         SecurityFilter filter = new SecurityFilter(provider);
